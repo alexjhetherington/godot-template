@@ -1,0 +1,166 @@
+[gd_scene load_steps=3 format=3 uid="uid://qnqec6cruvon"]
+
+[ext_resource type="Script" uid="uid://civuwmls0rnax" path="res://game/menu/settings_menu.gd" id="1_bn3kc"]
+[ext_resource type="Theme" uid="uid://bm65wt0oy8xkf" path="res://assets/themes/default_theme.tres" id="1_l0ksg"]
+
+[node name="SettingsMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l0ksg")
+script = ExtResource("1_bn3kc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.294118)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -247.5
+offset_right = 247.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Label" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 120
+columns = 2
+
+[node name="Label5" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "window mode"
+
+[node name="WindowModeOptions" type="OptionButton" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "resolution scale"
+
+[node name="ResScaleSlider" type="HSlider" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+min_value = 0.25
+max_value = 1.0
+step = 0.25
+value = 1.0
+tick_count = 4
+ticks_on_borders = true
+
+[node name="HSeparator5" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator6" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label6" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "vsync"
+
+[node name="VysncCheckbox" type="CheckBox" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label8" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "max fps"
+
+[node name="FpsSpinbox" type="SpinBox" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 999.0
+rounded = true
+update_on_text_changed = true
+
+[node name="HSeparator7" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator8" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label4" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "mouse sensitivity"
+
+[node name="SensitivitySlider" type="HSlider" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+min_value = 0.2
+max_value = 1.8
+step = 0.2
+value = 1.0
+tick_count = 9
+ticks_on_borders = true
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label3" type="Label" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "volume"
+
+[node name="VolumeSlider" type="HSlider" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_vertical = 1
+max_value = 1.0
+step = 0.1
+value = 1.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+
+[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/MarginContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ReturnButton" type="Button" parent="ScrollContainer/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "return"

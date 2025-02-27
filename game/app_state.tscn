@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmwq5af8jrm2i"]
+
+[ext_resource type="Script" uid="uid://bm8lweexexrp7" path="res://game/app_state.gd" id="1_m1yt5"]
+[ext_resource type="PackedScene" uid="uid://dax4sodbtgf1x" path="res://addons/footnote_utilities/transitions/fade/simple_fade.tscn" id="2_226my"]
+[ext_resource type="PackedScene" uid="uid://5ouqyd5c24rs" path="res://game/menu/main_menu.tscn" id="3_226my"]
+[ext_resource type="PackedScene" uid="uid://dde1q8xdtggbr" path="res://game/level/game.tscn" id="4_kbqct"]
+
+[node name="AppState" type="Node"]
+process_mode = 3
+script = ExtResource("1_m1yt5")
+transition_scene = ExtResource("2_226my")
+main_menu_scene = ExtResource("3_226my")
+main_game_scene = ExtResource("4_kbqct")

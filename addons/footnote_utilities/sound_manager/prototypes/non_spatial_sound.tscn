@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmqc2u4uvns0a"]
+
+[ext_resource type="Script" path="res://addons/footnote_utilities/sound_manager/audio_stream_player_self_destruct.gd" id="1_neq16"]
+
+[node name="non_spatial_sound" type="AudioStreamPlayer"]
+
+[node name="SelfDestruct" type="Node" parent="."]
+script = ExtResource("1_neq16")

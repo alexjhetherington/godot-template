@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SoundLibrary" load_steps=3 format=3 uid="uid://yebu7pm1waeh"]
+
+[ext_resource type="Script" uid="uid://c4keac0y4261x" path="res://addons/footnote_utilities/sound_manager/sound_library.gd" id="1_c1v5t"]
+[ext_resource type="Script" uid="uid://cg53tc2gg0md1" path="res://addons/footnote_utilities/sound_manager/sound_config.gd" id="2_re5jq"]
+
+[resource]
+script = ExtResource("1_c1v5t")
+bus = ""
+sound_configs = Array[ExtResource("2_re5jq")]([])
+metadata/_custom_type_script = "uid://c4keac0y4261x"
