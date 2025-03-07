@@ -37,6 +37,7 @@ func _process(_delta):
 func pause(paused : bool):
 	is_paused = paused
 	get_tree().paused = is_paused
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	PauseMenu.enable(paused)
 
 func on_console_opened():
