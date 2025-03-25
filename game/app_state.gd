@@ -33,11 +33,11 @@ func _process(_delta):
 	if Input.is_action_just_pressed("pause") and current == GAME:
 		if !console_open:
 			pause(!is_paused)
+	if Input.is_action_just_pressed("pause") and SettingsMenu.visible:
+		SettingsMenu._return()
 
 func pause(paused : bool):
-	if (SettingsMenu.visible):
-		SettingsMenu._return()
-	else:
+	if (!SettingsMenu.visible):
 		is_paused = paused
 		get_tree().paused = is_paused
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
