@@ -357,4 +357,3 @@ func _exit_tree() -> void:
 			if (write_index >= start_write_index):
 				console_history_file.store_line(line)
 			write_index += 1
-
